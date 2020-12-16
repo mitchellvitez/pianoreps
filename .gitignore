@@ -1,0 +1,4 @@
+stack.yaml.lock
+pianoreps.db
+*.swp
+.stack-work/

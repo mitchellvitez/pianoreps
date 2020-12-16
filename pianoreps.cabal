@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c38186479dd5aac19a13ca9b1a128d0b9d69fef082df20cec0f71bed9d01730d
+
+name:           pianoreps
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/pianoreps#readme>
+homepage:       https://github.com/mitchellvitez/pianoreps#readme
+bug-reports:    https://github.com/mitchellvitez/pianoreps/issues
+author:         Mitchell Vitez
+maintainer:     mitchell@vitez.me
+copyright:      2020
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/mitchellvitez/pianoreps
+
+library
+  exposed-modules:
+      Main
+      Util
+  other-modules:
+      Paths_pianoreps
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , servant-server
+    , sqlite-simple
+    , text
+    , unliftio-core
+    , wai
+    , warp
+  default-language: Haskell2010
+
+executable pianoreps-exe
+  main-is: Main.hs
+  other-modules:
+      Util
+      Paths_pianoreps
+  hs-source-dirs:
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base
+    , pianoreps
+    , servant-server
+    , sqlite-simple
+    , text
+    , wai
+    , warp
+  default-language: Haskell2010
