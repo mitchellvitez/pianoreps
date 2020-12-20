@@ -18,6 +18,7 @@ import Servant
 import Util
 
 dbName = "pianoreps.db"
+port = 1810
 
 data Exercise = Exercise
   { exerciseBpm :: Int
@@ -39,8 +40,8 @@ type API =
 main :: IO ()
 main = do
   migrate
-  putStrLn "running"
-  run 8080 app
+  putStrLn $ "running on port " <> show port
+  run port app
 
 migrate :: IO ()
 migrate = withConn $ \conn ->

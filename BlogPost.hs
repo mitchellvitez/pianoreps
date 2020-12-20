@@ -3,7 +3,7 @@
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE TypeOperators   #-}
 
-module BlogPostMain where -- code relevant to https://vitez.me/light-db-api
+module BlogPost where -- code relevant to https://vitez.me/light-db-api
 
 import Control.Applicative
 import Control.Monad.IO.Class (liftIO)
@@ -37,8 +37,8 @@ type API =
   "list" :> Get '[JSON] [Exercise] :<|>
   "add" :> ReqBody '[JSON] Exercise :> Post '[JSON] Exercise
 
-main :: IO ()
-main = do
+blogMain :: IO ()
+blogMain = do
   migrate
   putStrLn "running"
   run 8080 app

@@ -1,4 +1,5 @@
-stack.yaml.lock
-pianoreps.db
 *.swp
 .stack-work/
+pianoreps.cabal
+pianoreps.db
+stack.yaml.lock
