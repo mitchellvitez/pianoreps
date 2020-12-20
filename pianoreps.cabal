@@ -14,8 +14,6 @@ bug-reports:    https://github.com/mitchellvitez/pianoreps/issues
 author:         Mitchell Vitez
 maintainer:     mitchell@vitez.me
 copyright:      2020
-license:        BSD3
-license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
