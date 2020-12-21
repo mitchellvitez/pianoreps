@@ -2,4 +2,6 @@
 .stack-work/
 pianoreps.cabal
 pianoreps.db
+pianoreps.db-shm
+pianoreps.db-wal
 stack.yaml.lock

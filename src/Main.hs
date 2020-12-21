@@ -85,7 +85,7 @@ type API =
 
 newtype AppT m a =
   AppT { runApp :: ReaderT Config (ExceptT ServerError m) a }
-  deriving ( Functor, Applicative, Monad, MonadReader Config, MonadError ServerError, MonadIO)
+  deriving (Functor, Applicative, Monad, MonadReader Config, MonadError ServerError, MonadIO)
 
 type App = AppT IO
 
@@ -149,7 +149,4 @@ populate = do
   pure exercise
 
 exercises :: App [Exercise]
-exercises =
-  runDB $ do
-    all <- selectList [] []
-    pure $ map entityVal all
+exercises = runDB $ map entityVal <$> selectList [] []
