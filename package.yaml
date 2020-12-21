@@ -13,11 +13,22 @@ description:         Please see the README on GitHub at <https://github.com/mitc
 dependencies:
 - base >= 4.7 && < 5
 - aeson
+- monad-logger
+- mtl
+- persistent
+- persistent-sqlite
+- persistent-template
+- rando
+- random
+- resource-pool
+- say
 - servant-server
 - sqlite-simple
 - text
+- transformers
 - wai
 - warp
+- yesod-core
 
 library:
   source-dirs: src
