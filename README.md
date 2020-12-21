@@ -2,7 +2,13 @@
 
 Super-simple API for tracking piano exercises, using Servant and ~sqlite-simple~ Persistent
 
-Wrote a quick [blog post](https://vitez.me/light-db-api) about putting together the sqlite-simple version of this. You can see that code in `BlogPost.hs`
+## Writeups
+
+I've written a couple blog posts involving this code.
+
+- [Building a nicely-typed lightweight database-backed API with Haskell, Servant, and Sqlite
+](https://vitez.me/light-db-api) (a mouthful!) is about putting together the sqlite-simple version of this. You can see that code in `BlogPost.hs`
+- [Using Persistent with Servant](https://vitez.me/persistent-servant) is about supporting Persistent instead of sqlite-simple, and demonstrates a bit of monad transformer madness. That code is currently in `Main`.
 
 ## Usage
 
